@@ -1,14 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite';
-import path from "path"
-// https://vite.dev/config/
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
 export default defineConfig({
   base: '/my-portfolio/',
-  plugins: [react(), tailwindcss()],
+  plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve("./src"),
-    }
-  }
-})
+      '@': path.resolve('./src'),
+    },
+  },
+});
